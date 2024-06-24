@@ -31,8 +31,13 @@ function botonAlert(){
 /* 6. Al hacer clic en el botón "suma", 
 pide 2 números y muestra el resultado de la suma en una alerta.*/
 function botonSuma(){
-    numeroUno = parseInt(prompt('Ingrese primer numero:'));
-    numeroDos = parseInt(prompt('Ingrese segundo numero:'));
-    resutlado = numeroUno + numeroDos;
-    alert(`Resultado de ${numeroUno}+${numeroDos} = ${resutlado}`);
+    let numeroUno = parseInt(prompt('Ingrese primer numero:'));
+    let numeroDos = parseInt(prompt('Ingrese segundo numero:'));
+    if (!isNaN(numeroUno)  && !isNaN(numeroDos)){
+        let resultado = numeroUno + numeroDos;
+        alert(`Resultado de ${numeroUno}+${numeroDos} = ${resultado}`);
+    }else{
+        alert('Algo ha fallado.')
+    }
+    
 }
